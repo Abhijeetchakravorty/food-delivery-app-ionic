@@ -1,4 +1,29 @@
-<h1>
-    Zomato
-</h1>
+<mat-toolbar>
+    <div class="width-100" fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="row" fxLayout.xs="row">
+        <div fxFlex="20%">
+            
+            <h1>Twitch</h1>
+        </div>
+        <div fxFlex="30%">
+            <img class="twitch-in-logo" src="./assets/images/logo.png" />
+        </div>
+        <div fxFlex="50%">
+            <div class="text-align-right">
+                <button mat-icon-button class="example-icon" aria-label="Example icon-button with menu icon" [matMenuTriggerFor]="menu">
+                    <mat-icon>menu</mat-icon>
+                </button>
+                <mat-menu #menu="matMenu">
+                    <button mat-menu-item>
+                      <mat-icon>person</mat-icon>
+                      <span>Abhijeet Chakravorty</span>
+                    </button>
+                    <button mat-menu-item disabled>
+                      <mat-icon>logout</mat-icon>
+                      <span>Logout</span>
+                    </button>
+                  </mat-menu>
+            </div>
+        </div>
+    </div>
+  </mat-toolbar>
 <router-outlet></router-outlet>

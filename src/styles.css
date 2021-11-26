@@ -32,3 +32,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 .margin-top-0{
 	margin-top: 0px !important;
 }
+
+.text-align-right{
+	text-align: right;
+}
