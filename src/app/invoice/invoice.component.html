@@ -1,0 +1,31 @@
+<ng-container>
+        <div>
+                <h1>
+                        Twitch Food Order Invoice:
+                </h1>
+                <ol>
+                        <li>
+                                Item Id: {{orderData.dishDetails.id}}   
+                        </li>
+                        <li>
+                                Item Name: {{orderData.dishDetails.name}}   
+                        </li>
+                        <li>
+                                Quantity: {{orderData.dishDetails.qty}}
+                        </li>
+                        <li>
+                                Amount: {{orderData.payment.amount}}
+                        </li>
+                        <li>
+                                Total Amount: {{orderData.payment.totalAmount}}
+                        </li>
+                        <li>
+                                Address: {{orderData.payment.address}}
+                        </li>
+                        <li>
+                                Phone: {{orderData.payment.phone}}
+                        </li>
+                </ol>
+                <p>Thanks for ordering! Hope you enjoy the food.</p>
+        </div>
+</ng-container>

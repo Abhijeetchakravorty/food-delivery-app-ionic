@@ -64,6 +64,8 @@ import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
 import {MatDatepickerModule} from '@angular/material/datepicker';
 import { NotFoundComponent } from './not-found/not-found.component';
 import {MatNativeDateModule} from '@angular/material/core';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { SummaryComponent } from './summary/summary.component';
 
 @NgModule({
   declarations: [
@@ -75,7 +77,9 @@ import {MatNativeDateModule} from '@angular/material/core';
     DishesComponent,
     OrderComponent,
     PaymentComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    InvoiceComponent,
+    SummaryComponent
   ],
   imports: [
     BrowserModule,

@@ -15,6 +15,8 @@ import { DishesComponent } from './dishes/dishes.component';
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
 import { NotFoundComponent } from './not-found/not-found.component';
+import { InvoiceComponent } from './invoice/invoice.component';
+import { SummaryComponent } from './summary/summary.component';
 const routes: Routes = [
         {       
                 path: '', 
@@ -53,6 +55,14 @@ const routes: Routes = [
                                         {
                                                 path: 'order',
                                                 component: OrderComponent
+                                        },
+                                        {
+                                                path: 'invoice',
+                                                component: InvoiceComponent
+                                        },
+                                        {
+                                                path: 'summary',
+                                                component: SummaryComponent
                                         }
                                 ]
                         }
