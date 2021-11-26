@@ -1,0 +1,30 @@
+<ul class="restaurant-ul-list">
+    <li  *ngFor="let data of updatedDishes" class="restaurant-list">
+        <mat-card>
+            <mat-card-title>{{data.name}}</mat-card-title>
+            <mat-card-content>
+                <p>Price: {{data.price}}</p>
+                <p>
+                    Qty:  <mat-select name="food">
+                        <mat-option [value]="1">
+                          1
+                        </mat-option>
+                        <mat-option [value]="2">
+                            2
+                          </mat-option>
+                          <mat-option [value]="3">
+                            3
+                          </mat-option>
+                          <mat-option [value]="4">
+                            4
+                          </mat-option>
+                          <mat-option [value]="5">
+                            5
+                          </mat-option>
+                      </mat-select>
+                </p>
+                <button mat-raised-button color="primary">Order Now</button>
+            </mat-card-content>
+        </mat-card>
+    </li>
+</ul>

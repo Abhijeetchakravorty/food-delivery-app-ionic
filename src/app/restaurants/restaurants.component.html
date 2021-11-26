@@ -1,0 +1,16 @@
+<!-- <mat-list role="list">
+    <mat-list-item role="listitem">
+        
+    </mat-list-item>
+</mat-list> -->
+
+<ng-container>
+    <ul class="restaurant-ul-list">
+        <li  *ngFor="let data of restaurants" class="restaurant-list">
+            <mat-card (click)="navigateDishes(data)">
+                <mat-card-title>{{data.name}}</mat-card-title>
+                <mat-card-content>Start</mat-card-content>
+            </mat-card>
+        </li>
+    </ul>
+</ng-container>
