@@ -20,27 +20,22 @@
                       </b>
                     </u>
                   </h1>
-                  <mat-form-field>
-                    <mat-label>Username/email/phone</mat-label>
-                    <input matInput placeholder="username">
-                  </mat-form-field>
-                  <!-- <mat-form-field class="form-field-container form-group">
+                  
+                  <mat-form-field class="form-field-container form-group">
                       <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.email" matInput placeholder="Email" type="email"/>
-                      <div *ngIf="login && s.emailOn.errors" class="invalid-feedback">
+                      <!-- <div *ngIf="login && s.emailOn.errors" class="invalid-feedback">
                         <div *ngIf="s.emailOn.errors.required">Email is required</div>
                         <div *ngIf="s.emailOn.errors.emailOn">Email must be a valid email address</div>
-                      </div>
-                      </mat-form-field> -->
+                      </div>-->
+                      </mat-form-field>
                 </div>
                 <div class="rokyo-margin-5" fxFlex.xl="100%" fxFlex.lg="100%" fxFlex.md="100%" fxFlex.sm="100%"
                   fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="space-between">
                   <mat-form-field class="form-field-container form-group">
-                    <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.password" type="password"
+                    <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.password" [type]="inputType"
                       matInput placeholder="Password">
-                    <!-- <div *ngIf="login && s.passwordLogin.errors" class="invalid-feedback">
-                        <div *ngIf="s.passwordLogin.errors.required">Password is required</div>
-                        <div *ngIf="s.passwordLogin.errors.minlength">Password must be at least 8 characters</div>
-                        </div> -->
+                    <mat-icon *ngIf="showLock" matSuffix (click)="togglePassword(0)">lock</mat-icon>
+                    <mat-icon *ngIf="!showLock" matSuffix (click)="togglePassword(1)">no_encryption</mat-icon>
                   </mat-form-field>
                 </div>
               </div>
@@ -56,7 +51,11 @@
           <button mat-button class="rokyo-forgot-password" [routerLink]="['/registration']">
             Signup?
           </button>
+          <span *ngIf="showError">Please provide a valid password: Minimum 8 characters,</span>
+        <span *ngIf="showError">at least one uppercase letter, one lowercase letter</span>
+        <span *ngIf="showError">one number and one special character:</span>
         </form>
+        
       </div>
     </div>
   </section>
