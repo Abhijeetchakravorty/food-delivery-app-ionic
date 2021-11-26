@@ -1,10 +1,12 @@
 <ng-container>
-    <ul class="restaurant-ul-list">
-        <li  *ngFor="let data of restaurants" class="restaurant-list">
-            <mat-card (click)="navigateDishes(data)">
-                <mat-card-title>{{data.name}}</mat-card-title>
-                <mat-card-content>Start</mat-card-content>
-            </mat-card>
-        </li>
-    </ul>
+    <div class="twitch-restaurant-list-container">
+        <ul class="restaurant-ul-list">
+            <li  *ngFor="let data of restaurants" class="restaurant-list">
+                <mat-card (click)="navigateDishes(data)">
+                    <mat-card-title>{{data.name}}</mat-card-title>
+                    <mat-card-content>Start</mat-card-content>
+                </mat-card>
+            </li>
+        </ul>
+    </div>
 </ng-container>

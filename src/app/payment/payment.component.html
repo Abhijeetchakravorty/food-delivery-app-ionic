@@ -1,1 +1,30 @@
-<p>payment works!</p>
+<ng-container>
+        <div class="payment-container">
+                <form fxLayout.xl="row" fxLayout.lg="row" fxLayout.md="row" fxLayout.sm="column" fxLayout.xs="column">
+                        <div class="twitch-padding-2">
+                                <mat-form-field fxFlex="100%">
+                                        <mat-label>Full Address</mat-label>
+                                        <textarea matInput></textarea>
+                                </mat-form-field>
+                        </div>
+                        <div class="twitch-padding-2">
+                                <mat-form-field fxFlex="100%">
+                                        <mat-label>Phone Number</mat-label>
+                                        <input matInput>
+                                </mat-form-field>
+                        </div>
+                        <div class="twitch-padding-2">
+                                <mat-form-field fxFlex="100%">
+                                        <mat-label>Choose Payment Type</mat-label>
+                                        <mat-select>
+                                          <mat-option value="1">Credit Card</mat-option>
+                                          <mat-option value="2">Net Banking</mat-option>
+                                        </mat-select>
+                                </mat-form-field>
+                        </div>
+                        <div class="twitch-padding-2">
+                                <button fxFlex="100%" mat-raised-button color="warn">Pay Now</button>
+                        </div>
+                </form>
+        </div>
+</ng-container>

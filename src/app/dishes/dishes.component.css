@@ -4,4 +4,16 @@
 .restaurant-ul-list{
     list-style-type: none;
     padding: 0px;
+    margin-bottom: 25%;
+}
+
+.twitch-background-images{
+    background-image: url('../../assets/images/dish.jpeg');
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+    position: fixed;
+    overflow-y: auto;
+    margin-bottom: 10%;
 }

@@ -1,7 +1,21 @@
 .restaurant-list{
     margin: 10px;
 }
+
+.restaurant-list > mat-card{
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
 .restaurant-ul-list{
     list-style-type: none;
     padding: 0px;
+}
+
+.twitch-restaurant-list-container{
+    background-image: url('../../assets/images/login.jpeg');
+	height: 100%;
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	padding-top: 10%;
 }
