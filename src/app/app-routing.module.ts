@@ -14,6 +14,7 @@ import { RestaurantsComponent } from './restaurants/restaurants.component';
 import { DishesComponent } from './dishes/dishes.component';
 import { OrderComponent } from './order/order.component';
 import { PaymentComponent } from './payment/payment.component';
+import { NotFoundComponent } from './not-found/not-found.component';
 const routes: Routes = [
         {       
                 path: '', 
@@ -56,6 +57,10 @@ const routes: Routes = [
                                 ]
                         }
                 ]
+        },
+        {
+                path: '**',
+                component: NotFoundComponent 
         }
 
 ];

@@ -60,7 +60,11 @@ import {
   MatChipsModule
 } from '@angular/material/chips';
 import { MatDialogModule } from '@angular/material/dialog';
-import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
+import { MatProgressSpinnerModule } from '@angular/material/progress-spinner';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import { NotFoundComponent } from './not-found/not-found.component';
+import {MatNativeDateModule} from '@angular/material/core';
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -70,7 +74,8 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     RestaurantsComponent,
     DishesComponent,
     OrderComponent,
-    PaymentComponent
+    PaymentComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -98,7 +103,9 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
                 MatAutocompleteModule,
                 MatChipsModule,
                 MatDialogModule,
-                MatProgressSpinnerModule
+    MatProgressSpinnerModule,
+                MatNativeDateModule,
+                MatDatepickerModule
   ],
   providers: [],
   bootstrap: [AppComponent]

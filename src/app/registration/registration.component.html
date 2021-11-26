@@ -3,7 +3,7 @@
       <div class="rokyo-login-user">
         <div class="text-align-center">
           <img class="rokyo-admin-logo" src="./assets/images/logo.png" />
-          <h1 class="rokyo-margin-padding-nil color-white change-font">Twitch</h1>
+          <h1 class="rokyo-margin-padding-nil color-white change-font margin-bottom-0 margin-top-0">Twitch</h1>
         </div>
         <div class="twitch-login-container">
           <form class="twitch-form-container">
@@ -13,10 +13,10 @@
                   fxLayout.xs="column">
                   <div class="rokyo-margin-5" fxFlex.xl="100%" fxFlex.lg="100%" fxFlex.md="100%" fxFlex.sm="100%"
                     fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="space-between">
-                    <h1 class="twitch-login-text">
+                    <h1 class="twitch-login-text margin-bottom-0">
                       <u>
                         <b>
-                          Login
+                          Register
                         </b>
                       </u>
                     </h1>
@@ -34,25 +34,49 @@
                     <mat-form-field class="example-full-width">
                         <mat-label>Email</mat-label>
                         <input [ngModelOptions]="{standalone: true}" type="email" matInput [(ngModel)]="user.email">
+                        <mat-icon matSuffix>email</mat-icon>
                     </mat-form-field>
                     <mat-form-field class="example-full-width">
                         <mat-label>Password</mat-label>
                         <input [ngModelOptions]="{standalone: true}" type="password" matInput [(ngModel)]="user.password">
+                        <mat-icon matSuffix>lock</mat-icon>
+                        <!-- <mat-icon matSuffix>no_encryption</mat-icon> -->
                     </mat-form-field>
                     <mat-form-field class="form-field-container form-group">
-                      <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.password" type="password"
-                        matInput placeholder="Password">
+                      <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.cnfpassword" type="password"
+                        matInput placeholder="Confirm Password">
+                        <mat-icon matSuffix>lock</mat-icon>
+                        <!-- <mat-icon matSuffix>no_encryption</mat-icon> -->
+                    </mat-form-field>
+                    <mat-form-field>
+                      <mat-label>Choose birthdate</mat-label>
+                      <input [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.dob" matInput [matDatepicker]="picker">
+                      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                      <mat-datepicker #picker></mat-datepicker>
+                    </mat-form-field>
+
+                    <mat-form-field>
+                      <mat-label>Choose Gender</mat-label>
+                      <mat-select [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.gender">
+                        <mat-option value="0">Male</mat-option>
+                        <mat-option value="1">Female</mat-option>
+                      </mat-select>
                     </mat-form-field>
                   </div>
                 </div>
               </div>
             </div>
             <div class="width-100">
-                <button color="warn" (click)="registration()" type="submit" mat-raised-button class="login-btn width-100">
-                  LOG IN
+                <mat-checkbox class="example-margin" [ngModelOptions]="{standalone: true}" matInput [(ngModel)]="user.agreement">You agree to Twitch's terms of use</mat-checkbox>
+                <button color="warn" [routerLink]="['/restaurants']" type="submit" mat-raised-button class="login-btn width-100">
+                  Register
                 </button>
             </div>
-            <p class="rokyo-forgot-password">Forgot Password?</p>
+            <p class="rokyo-forgot-password">
+              <a [routerLink]="['/login']">
+                Already have an account? Login
+              </a>
+            </p>
           </form>
         </div>
       </div>

@@ -3,7 +3,7 @@
     <div class="rokyo-login-user">
       <div class="text-align-center">
         <img class="rokyo-admin-logo" src="./assets/images/logo.png" />
-        <h1 class="rokyo-margin-padding-nil color-white change-font">Twitch</h1>
+        <h1 class="rokyo-margin-padding-nil color-white change-font margin-bottom-0">Twitch</h1>
       </div>
       <div class="twitch-login-container">
         <form class="twitch-form-container">
@@ -13,7 +13,7 @@
                 fxLayout.xs="column">
                 <div class="rokyo-margin-5" fxFlex.xl="100%" fxFlex.lg="100%" fxFlex.md="100%" fxFlex.sm="100%"
                   fxFlex.xs="100%" fxLayout="column" fxLayoutAlign="space-between">
-                  <h1 class="twitch-login-text">
+                  <h1 class="twitch-login-text margin-bottom-0">
                     <u>
                       <b>
                         Login
@@ -50,10 +50,12 @@
             <button color="warn" (click)="onLogin()" type="submit" mat-raised-button class="login-btn width-100">LOG
               IN</button>
           </div>
-          <p class="rokyo-forgot-password">Forgot Password?</p>
-          <div class="rokyo-login-action-container">
-            <p class="rokyo-forgot-password" [routerLink]="['/registration']">Signup?</p>
-          </div>
+          <button mat-button class="rokyo-forgot-password">
+            Forgot Password?
+          </button>
+          <button mat-button class="rokyo-forgot-password" [routerLink]="['/registration']">
+            Signup?
+          </button>
         </form>
       </div>
     </div>

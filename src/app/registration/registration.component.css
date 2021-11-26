@@ -1,4 +1,4 @@
-.login{  
+/* .login{  
     width: 382px;  
     overflow: hidden;  
     margin: auto;  
@@ -49,4 +49,39 @@ font-size: 17px;
 a{  
 float: right;  
 background-color: grey;  
-}  
+}   */
+
+
+.rokyo-admin-logo{
+    max-width: 150px;
+}
+
+.rokyo-admin-logo{
+    border-radius: 50%;
+}
+
+.color-white{
+    color:#fff;
+}
+
+.change-font {
+    font-family: fantasy !important;
+    font-size: 50px;
+}
+
+.twitch-login-container{
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.twitch-form-container{
+    background-color: rgba(255, 255, 255, 0.7);
+    padding: 5%;
+    padding-top: 0 !important;
+    border-radius: 5px;
+}
+
+.twitch-login-text{
+    text-align: center;
+    font-family: fantasy;
+}
